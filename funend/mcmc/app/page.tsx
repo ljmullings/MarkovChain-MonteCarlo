@@ -3,9 +3,9 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 import { ArrowRight, BarChart2, GitBranch, Database, Cpu, Zap, Layers } from 'lucide-react'
 
 const menuItems = [
-  { title: 'Forecasting Experiments', description: 'Run and analyze forecasting models', icon: BarChart2, href: '/forecasting' },
-  { title: 'Monte Carlo Simulations', description: 'Perform Monte Carlo simulations', icon: GitBranch, href: '/monte-carlo' },
-  { title: 'Samples', description: 'Manage and visualize sample data', icon: Database, href: '/samples' },
+  { title: 'MCMC Simulator', description: 'Monte Carlo Markov Chain Simulations', icon: BarChart2, href: '/forecasting' },
+  { title: 'Probability Distribution Simulator', description: 'Check out both discrete and continuous probability distributions', icon: GitBranch, href: '/monte-carlo' },
+  { title: 'Bayesian Forecasting', description: 'Feature in development', icon: Database, href: '/samples' },
   { title: 'Future Feature 1', description: 'Coming soon', icon: Cpu, href: '#' },
   { title: 'Future Feature 2', description: 'Coming soon', icon: Zap, href: '#' },
   { title: 'Future Feature 3', description: 'Coming soon', icon: Layers, href: '#' },
