@@ -26,6 +26,10 @@ const binomialCoefficient = (n: number, k: number): number => {
   return factorial(n) / (factorial(k) * factorial(n - k))
 }
 
+const gaussianProposal = (current: number, stepSize: number): number => {
+  return current + (Math.random() * 2 - 1) * stepSize; // Step within [-stepSize, stepSize]
+};
+
 const calculateDistribution = (distribution: Distribution, parameters: Record<string, number>) => {
   const points = 100
   let data: { x: number; y: number }[] = []
@@ -101,7 +105,8 @@ export {
   bernoulliPDF,
   binomialPMF,
   poissonPMF,
-  gaussianPDF,
+  gaussianPDF as normalDistribution,
+  gaussianProposal,
   calculateDistribution
 }
 

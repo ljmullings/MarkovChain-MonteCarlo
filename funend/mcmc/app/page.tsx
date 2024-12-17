@@ -3,7 +3,7 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 import { ArrowRight, BarChart2, GitBranch, Database, Cpu, Zap, Layers } from 'lucide-react'
 
 const menuItems = [
-  { title: 'MCMC Simulator', description: 'Monte Carlo Markov Chain Simulations', icon: BarChart2, href: '/forecasting' },
+  { title: 'MCMC Simulator', description: 'Monte Carlo Markov Chain Simulations', icon: BarChart2, href: '/mcmc' },
   { title: 'Probability Distribution Simulator', description: 'Check out both discrete and continuous probability distributions', icon: GitBranch, href: '/monte-carlo' },
   { title: 'Bayesian Forecasting', description: 'Feature in development', icon: Database, href: '/samples' },
   { title: 'Future Feature 1', description: 'Coming soon', icon: Cpu, href: '#' },
