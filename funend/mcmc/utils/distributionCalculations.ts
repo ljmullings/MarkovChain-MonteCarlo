@@ -1,14 +1,26 @@
 import { Distribution, DistributionType } from '../types/distributions'
 
 const factorial = (n: number): number => {
-    if (n === 0 || n === 1) return 1
-    let result = 1
-    for (let i = 2; i <= n; i++) {
-      result *= i
-    }
-    return result
+  if (n === 0 || n === 1) return 1
+  let result = 1
+  for (let i = 2; i <= n; i++) {
+    result *= i
   }
-  
+  return result
+}
+// pmf/cdf function exports 
+
+const bernoulliPDF = (x: number, p: number): number => (x === 1 ? p : 1 - p);
+
+const binomialPMF = (k: number, n: number, p: number): number =>
+  (factorial(n) / (factorial(k) * factorial(n - k))) * Math.pow(p, k) * Math.pow(1 - p, n - k);
+
+const poissonPMF = (k: number, lambda: number): number =>
+  (Math.pow(lambda, k) * Math.exp(-lambda)) / factorial(k);
+
+const gaussianPDF = (x: number, mu: number, sigma: number): number =>
+  (1 / (sigma * Math.sqrt(2 * Math.PI))) *
+  Math.exp(-0.5 * Math.pow((x - mu) / sigma, 2));
 
 const binomialCoefficient = (n: number, k: number): number => {
   return factorial(n) / (factorial(k) * factorial(n - k))
@@ -85,5 +97,11 @@ const calculateDistribution = (distribution: Distribution, parameters: Record<st
   return data
 }
 
-export { calculateDistribution }
+export {
+  bernoulliPDF,
+  binomialPMF,
+  poissonPMF,
+  gaussianPDF,
+  calculateDistribution
+}
 
